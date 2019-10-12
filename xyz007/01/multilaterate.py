@@ -23,6 +23,20 @@ def multilaterate(distances):
 # (x,y for circle)
 
 
+def expand(landmark):
+    x1 = landmark[0]*-1
+    y1 = landmark[1]*-1
+    expandedX = x1 * 2
+    c = math.pow(x1, 2)
+
+    expandedY = y1 * 2
+    d = math.pow(y1, 2)
+
+    # (x-x1)^2 + (y-y1)^2 = r
+    # equation data = [x^2 , x, y^2, y, c]
+    equation = [1, expandedX, 1, , c+d]
+
+
 def findIntersection2(landmark1, landmark2):
     x1 = landmark1[0]
     x2 = landmark2[1]
@@ -30,6 +44,8 @@ def findIntersection2(landmark1, landmark2):
     y2 = landmark2[1]
     r1 = landmark1[3]
     r2 = landmark2[3]
+    # equation[x,x^2,y,y^2] values
+    equation1 =
 
 
 def findIntersection(landmark1, landmark2):
