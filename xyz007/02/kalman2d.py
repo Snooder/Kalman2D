@@ -88,8 +88,8 @@ if __name__ == "__main__":
     # Print out the data
     print("The input data points in the format of 'k [u1, u2, z1, z2]', are:")
     for it in range(0, len(data)):
-        print(str(it + 1) + ": ", end='')
-        print(*data[it])
+        print(str(it + 1))
+        print(data[it])
 
     P = P*scaler
     X = numpy.array([[x10], [x20]])
